@@ -11,10 +11,6 @@ app.use(express.json());
 require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
 
-// app.get('/', function(req, res){
-//     res.send("Welcome to Friend Finder!");
-// });
-
 app.listen(PORT, function(){
-    console.log('Server listening on: http://localhost:' + PORT)
+    console.log('Server listening on: http://localhost:' + PORT);
 });

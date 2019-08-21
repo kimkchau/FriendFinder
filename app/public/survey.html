@@ -7,9 +7,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!--jquery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 
 <body>
@@ -22,130 +26,228 @@
         </div>
 
         <div class="card">
+            <!-- Enter user info (name and photo) -->
             <h5 class="card-header">Survey Questions</h5>
             <div class="card-body">
                 <h5 class="card-title">About You</h5>
                 <form>
                     <div class="form-group">
+                        <!-- name -->
                         <label for="FormControlText">Name (required)</label>
-                        <input class="form-control" type="text" placeholder="Joe Smith">
+                        <input class="form-control" type="text" id="name" placeholder="Joe Smith">
+                        <!-- link to photo -->
                         <label for="FormControlText" style="margin: 20px 0px 8px 0px">Link to Photo Image
                             (required)</label>
-                        <input class="form-control" type="text"
+                        <input class="form-control" type="text" id="photo"
                             placeholder="https://www.pexels.com/photo/woman-wearing-coat-762020/">
                     </div>
                 </form>
-                <!-- <hr class="my-2"> -->
+                <!-- Survey Questions -->
                 <h5 class="card-title" style="margin: 30px 0px 12px 0px">Questions</h5>
                 <form>
                     <div class="form-group">
                         <label for="FormControlText">Your mind is always buzzing with unexplored ideas and plans</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1 (Strongly Disagree)</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5 (Strongly Agree)</option>
-                        </select>
-                        <label for="FormControlText" style="margin: 12px 0px 8px 0px">Generally speaking, you rely more
+                        <div class="input-group mb-3">
+                            <select class="custom-select col-md-3" id="Q1">
+                                <option selected>Choose...</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+                        <label for="FormControlText">Generally speaking, you rely more
                             on your experience than your imagination</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1 (Strongly Disagree)</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5 (Strongly Agree)</option>
-                        </select>
-                        <label for="FormControlText" style="margin: 12px 0px 8px 0px">You find it easy to stay relaxed
+                        <div class="input-group mb-3">
+                            <select class="custom-select col-md-3" id="Q2">
+                                <option selected>Choose...</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+                        <label for="FormControlText">You find it easy to stay relaxed
                             and focused even when there is some pressure</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1 (Strongly Disagree)</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5 (Strongly Agree)</option>
-                        </select>
-                        <label for="FormControlText" style="margin: 12px 0px 8px 0px">
+                        <div class="input-group mb-3">
+                            <select class="custom-select col-md-3" id="Q3">
+                                <option selected>Choose...</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+                        <label for="FormControlText">
                             You rarely do something just out of sheer curiosity</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1 (Strongly Disagree)</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5 (Strongly Agree)</option>
-                        </select>
-                        <label for="FormControlText" style="margin: 12px 0px 8px 0px">People can rarely upset
+                        <div class="input-group mb-3">
+                            <select class="custom-select col-md-3" id="Q4">
+                                <option selected>Choose...</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+                        <label for="FormControlText">People can rarely upset
                             you</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1 (Strongly Disagree)</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5 (Strongly Agree)</option>
-                        </select>
-                        <label for="FormControlText" style="margin: 12px 0px 8px 0px">It is often difficult for you to
+                        <div class="input-group mb-3">
+                            <select class="custom-select col-md-3" id="Q5">
+                                <option selected>Choose...</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+                        <label for="FormControlText">It is often difficult for you to
                             relate to other people’s feelings</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1 (Strongly Disagree)</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5 (Strongly Agree)</option>
-                        </select>
-                        <label for="FormControlText" style="margin: 12px 0px 8px 0px">In a discussion, truth should be
+                        <div class="input-group mb-3">
+                            <select class="custom-select col-md-3" id="Q6">
+                                <option selected>Choose...</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+                        <label for="FormControlText">In a discussion, truth should be
                             more important than people’s sensitivities</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1 (Strongly Disagree)</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5 (Strongly Agree)</option>
-                        </select>
-                        <label for="FormControlText" style="margin: 12px 0px 8px 0px">You rarely get carried away by
+                        <div class="input-group mb-3">
+                            <select class="custom-select col-md-3" id="Q7">
+                                <option selected>Choose...</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+                        <label for="FormControlText">You rarely get carried away by
                             fantasies and ideas</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1 (Strongly Disagree)</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5 (Strongly Agree)</option>
-                        </select>
-                        <label for="FormControlText" style="margin: 12px 0px 8px 0px">You think that everyone’s views
+                        <div class="input-group mb-3">
+                            <select class="custom-select col-md-3" id="Q8">
+                                <option selected>Choose...</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+                        <label for="FormControlText">You think that everyone’s views
                             should be respected regardless of whether they are supported by facts or not.</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1 (Strongly Disagree)</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5 (Strongly Agree)</option>
-                        </select>
-                        <label for="FormControlText" style="margin: 12px 0px 8px 0px">You feel more energetic after
+                        <div class="input-group mb-3">
+                            <select class="custom-select col-md-3" id="Q9">
+                                <option selected>Choose...</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+                        <label for="FormControlText">You feel more energetic after
                             spending time with a group of people</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1 (Strongly Disagree)</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5 (Strongly Agree)</option>
-                        </select>
+                        <div class="input-group mb-3">
+                            <select class="custom-select col-md-3" id="Q10">
+                                <option selected>Choose...</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
                     </div>
                 </form>
-                <a href="#" style="margin: 10px 0px" class="btn btn-primary" type="submit" value="Submit">Submit</a>
+                <!-- Button trigger modal -->
+                <button class="btn btn-primary submit" style="margin: 10px 0px" id="submit" type="button" value="Submit"
+                    data-toggle="modal" data-target="#exampleModalCenter">Submit</button>
             </div>
         </div>
-        <p style="margin: 20px 0px"><a href="/api/friends">API Friends List</a> | <a href="https://github.com/kimkchau/FriendFinder">GitHub Repo</a></p>
+        <p style="margin: 20px 0px"><a href="/api/friends">API Friends List</a> | <a
+                href="https://github.com/kimkchau/FriendFinder">GitHub Repo</a></p>
     </div>
+
+    <!-- Modal-->
+    <div class="modal fade" tabindex="-1" role="dialog" id="exampleModalCenter">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Your New Friend is:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <h5 id="match-name"></h5>
+                    <img id="match-img" src="" alt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
+    <!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
+    <script type="text/javascript">
+        $(".submit").on("click", function (event) {
+
+            event.preventDefault();
+
+            // Here we grab the form elements
+            var newFriend = {
+                name: $("#name").val().trim(),
+                photo: $("#photo").val().trim(),
+                scores: [
+                    $("#Q1").val().trim(),
+                    $("#Q2").val().trim(),
+                    $("#Q3").val().trim(),
+                    $("#Q4").val().trim(),
+                    $("#Q5").val().trim(),
+                    $("#Q6").val().trim(),
+                    $("#Q7").val().trim(),
+                    $("#Q8").val().trim(),
+                    $("#Q9").val().trim(),
+                    $("#Q10").val().trim()
+                ]
+            };
+            console.log(newFriend);
+
+            // This line is the magic. It"s very similar to the standard ajax function we used.
+            // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
+            // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
+            // depending on if a tables is available or not.
+
+            $.post("/api/friends", newFriend,
+                function (data) {
+                    console.log("survey.html", data);
+                    $('#match-name').text(data.name);
+                    $('#match-img').attr("src", data.photo);
+                    $('#exampleModalCenter').modal("toggle");
+                });
+        });
+
+    </script>
 </body>
 
 </html>

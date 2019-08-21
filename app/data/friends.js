@@ -2,18 +2,18 @@
 var friendsArray = [
     {
         name: "Ahmed",
-        photo: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        photo: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=300&w=300",
         scores: [
-            5,
-            1,
-            4,
-            4,
-            5,
-            1,
-            2,
-            5,
-            4,
-            1
+            "5",
+            "1",
+            "4",
+            "4",
+            "5",
+            "1",
+            "2",
+            "5",
+            "4",
+            "1",
         ]
     }
 ];
